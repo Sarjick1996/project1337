@@ -1,0 +1,393 @@
+<!-- Cloudflare Protection & Proxy Search Added -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Search across multiple torrent sites like 1337x, Pirate Bay, YTS, and more with a fast, clean, and safe torrent aggregator. No hosting, just results.">
+<meta name="keywords" content="Torrent Search, 1337x Search, Torrent Aggregator, Pirate Bay, YTS, EZTV, Proxy Search, Torrent Results, Magnet Links">
+<meta name="author" content="1337XSearch Team">
+
+<!-- Open Graph (Social Preview) -->
+<meta property="og:title" content="1337Xtreme - Torrent Search Aggregator">
+<meta property="og:description" content="Get premium search results from all top torrent sites in one place. No ads, no clutter – just clean torrent discovery.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com"> <!-- Replace with your actual domain -->
+<meta property="og:image" content="https://yourdomain.com/preview.jpg"> <!-- Optional preview image -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1337Xtreme – Clean & Smart Torrent Search">
+<meta name="twitter:description" content="Search top torrent sites like 1337x, YTS, EZTV, and more. Lightning-fast and safe torrent results.">
+<meta name="twitter:image" content="https://yourdomain.com/preview.jpg"> <!-- Optional image -->
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>1337Xtreme Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+.home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .home-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ff6f61;
+    }
+        body {
+            font-family: 'Merriweather', serif;
+            background: url('pic/xxx.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .search-box input {
+           padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent White */
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+        .search-button {
+              padding: 15px 30px;
+            background: linear-gradient(90deg, red, darkred);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border: none;
+            transition: 0.3s ease-in-out;
+        }
+        .results-table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .results-table th, .results-table td {
+            font-size: 0.85rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px rgba(0, 255, 0, 1);
+            margin-right: 5px;
+        }
+        .available {
+            background-color: green;
+        }
+        .unavailable {
+            background-color: red; /* Changed from red to blue */
+        }
+   .visit-button {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        background: rgba(255, 0, 0, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 6px;
+        backdrop-filter: blur(6px);
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        animation: glow-border 1.5s infinite alternate;
+    }
+
+    @keyframes glow-border {
+        0% { border-color: rgba(255, 0, 0, 1); box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.8); }
+        50% { border-color: rgba(200, 0, 0, 1); box-shadow: 0px 0px 15px rgba(200, 0, 0, 0.9); }
+        100% { border-color: rgba(255, 0, 0, 1); box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.8); }
+    }
+
+    .visit-button:hover {
+        transform: scale(1.05);
+    }
+.spacer {
+            height: 12vh;                                       /* Increased space to push disclaimer far below */
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+        }
+       .disclaimer, .legal-request {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+                                     /* fade background */
+            padding: 15px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            color: white; /* Ensures readability */
+            text-align: center;
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Adds visibility */
+        }
+        .legal-request {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+              .search-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background: rgba(255, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 1);
+            border-radius: 6px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            border: none;
+            margin-left: 15px;
+        }
+        .search-button:hover {
+            background: rgba(255, 0, 0, 0.5);
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+        }
+.results-table thead tr {
+    background: rgba(255, 0, 0, 0.4); /* Red transparent glassy effect */
+    backdrop-filter: blur(8px); /* Glass blur effect */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+}
+
+.custom-download-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.4);
+    z-index: 1000;
+    transition: none !important;        /* Disable any smooth changes */
+    transform: none !important;         /* Disable scaling */
+}
+
+.custom-download-button:hover,
+.custom-download-button:focus,
+.custom-download-button:active {
+    background: rgba(255, 0, 0, 0.3) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.4) !important;
+    transform: none !important;
+    transition: none !important;
+    text-decoration: none !important;
+}
+.results-table th {
+    padding: 12px;
+    text-align: left; /* Align text to the left */
+    text-transform: none; /* Keep text in normal capitalization */
+}
+.copyright {
+    text-align: center;}
+@keyframes blink {
+    0% { color: white; text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
+    50% { color: #00ff00; text-shadow: 0px 0px 12px rgba(0, 255, 0, 0.8); }
+    100% { color: white; text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
+
+    </style>
+    <script>
+
+
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+            }[tag]));
+        }
+
+        function isSafeURL(url) {
+            return url.startsWith("https://");
+        }
+
+        function searchTorrents() {
+    let searchInput = document.getElementById("search");
+    let query = searchInput.value.trim();
+    if (query) {
+        window.location.href = `result.html?query=${encodeURIComponent(query)}`;
+    }
+}
+
+// Ensures Enter key also triggers the search, without affecting other functionality
+document.addEventListener("DOMContentLoaded", function () {
+    let searchInput = document.getElementById("search");
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevents unintended behavior
+            searchTorrents();
+        }
+    });
+});
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = escapeHTML(urlParams.get("query"));
+
+            if (query) {
+            document.getElementById("search-query").innerHTML = `<span style='font-size: 1rem; font-weight: normal; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 5px 10px; border-radius: 8px; display: inline-block; color: white; margin-bottom: 10px; animation: blink 1.5s infinite;'> Showing Top Results for: <span style='animation: blink 1.5s infinite;'>${query}</span> </span>`;
+                fetchResults(query);
+            }
+        });
+
+        function fetchResults(query) {
+    let sites = [
+        { name: "1337x", url: `https://1337x.to/search/${query}/1/`, users: "2.3M" },
+        { name: "1337xx", url: `https://www.1337xx.to/search/${query}/1/`, users: "1.8M" },
+        { name: "The Pirate Bay", url: `https://pirateproxy.live/search/${query}/0/99/0`, users: "1.1M" },
+        { name: "1337x.hashhackers.com", url: `https://1337x.hashhackers.com/${query}/1/`, users: "1.6M" },
+        { name: "RARBG", url: `https://rarbgget.org/torrents.php?search=${query}`, users: "1.3M" },
+        { name: "LimeTorrents", url: `https://www.limetorrents.lol/search/all/${query}/`, users: "650K" },
+        { name: "YTS", url: `https://yts.mx/browse-movies/${query}/all/all/0/latest`, users: "830K" },
+        { name: "EZTV", url: `https://eztv.re/search/${query}`, users: "500K" },
+        { name: "TorLock", url: `https://www.torlock.com/all/torrents/${query}.html`, users: "350K" },
+        { name: "Zooqle", url: `https://zooqle.com/search?q=${query}`, users: "180K" },
+        { name: "TorrentGalaxy", url: `https://torrentgalaxy.to/torrents.php?search=${query}`, users: "450K" },
+        { name: "Nyaa", url: `https://nyaa.si/?f=0&c=0_0&q=${query}`, users: "300K" },
+        { name: "Glodls", url: `https://www.glodls.to/search_results.php?search=${query}`, users: "150K" },
+        { name: "MagnetDL", url: `https://www.magnetdl.com/search/?q=${query}`, users: "220K" },
+        { name: "Snowfl", url: `https://snowfl.com/search?q=${query}`, users: "90K" },
+        { name: "BTDigg", url: `https://btdig.com/search?q=${query}`, users: "175K" },
+        { name: "TorrentDownloads", url: `https://www.torrentdownloads.pro/search/?search=${query}`, users: "130K" }
+    ];
+
+    let results = document.getElementById("results");
+    results.innerHTML = "";
+
+    sites.forEach(site => {
+        let isAvailable = Math.random() > 0.5; // Simulate availability
+
+        let statusDot = isAvailable 
+            ? `<span class='status-dot available'></span> Available` 
+            : `<span class='status-dot unavailable'></span> Not Available`;
+
+        let visitButton = isAvailable && isSafeURL(site.url)
+            ? `<a href='${site.url}' target='_blank' class='visit-button'>Visit</a>` 
+            : `<span class='disabled-button'>N/A</span>`;
+
+        let row = `<tr>
+            <td>${site.name}</td>
+            <td>${statusDot}</td>
+            <td>${visitButton}</td>
+            <td>${site.users}</td>
+        </tr>`;
+
+        results.innerHTML += row;
+    });
+
+    if (results.innerHTML === "") {
+        results.innerHTML = `<tr><td colspan="4" style="text-align:center;">No results found</td></tr>`;
+    }
+}
+    </script>
+</head>
+<body>
+<a href="index.html" class="home-button">Home</a>
+<a href="usermanual.html" class="custom-download-button">Download Manual</a>
+
+    <div class="container">
+               
+        <h1 class="flex justify-center items-center">
+    <img src="logo/mainlogo2crop.svg" alt="1337XTorrentSearch Logo" width="220" height="150">
+</h1>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search torrents...">
+            <button class="search-button" onclick="searchTorrents()">Search</button>
+        </div>
+        <p id="search-query"></p>
+        <p style="font-size: 0.95rem; margin-top: -5px; margin-bottom: 10px; color: #eee;">
+            If a site doesn't show your result, try others. Use a VPN if access is limited.
+</p>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Top Torrent Sites Worldwide</th>
+                    <th>Status</th>
+                    <th>Download Link</th>
+                    <th>Daily Worldwide Users</th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+    </div>
+<div class="spacer"></div>
+
+
+    <div class="footer hidden-section">
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> This website does not host any torrent files or provide direct downloads. We only show search results to the users to third-party sites which is publicly available on google. Its a torrent search aggregator only. If you have any legal complaints, please visit the respective websites directly. Mail us in the contact page for promotion and other issues. Thank you have a nice day.</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 1337XSearch. All rights reserved.</p>
+        </div>
+        <div class="legal-request" id="notice">
+            <h2>Notice to Authorities & Copyright Holders</h2>
+            <p>We kindly request that authorities, copyright holders, and enforcement agencies recognize that 
+        <strong>1337XSearch</strong> is a <em>neutral search engine</em> and not a hosting platform. 
+        We do not control or store any copyrighted content but merely index publicly available information. 
+        If any concerns arise, we are open to discussions and compliance with valid legal requests.
+</p>
+        </div>
+    </div>
+</body>
+
+</html>

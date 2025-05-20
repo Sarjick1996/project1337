@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top application List - Play & Download</title>
+    <meta name="description" content="Discover the best free application to play online or download. Explore top-rated application from various genres!">
+    <meta name="keywords" content="free application, play online, download application, best adventure application, top PC application">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Merriweather', serif; background-size: cover; color: white; }
+
+body {
+    background-image: url('applicationimage/tech2.webp'); /* Use WEBP */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background static while scrolling */
+}
+
+/* Mobile-friendly settings */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+        .container { text-align: center; margin-top: 20px; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px; }
+        .table-container { width: 90%; margin: auto; margin-top: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; }
+        .application-table { width: 100%; border-collapse: collapse; }
+        .application-table th, .application-table td { font-size: 1rem; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(0, 0, 0, 0.3); text-align: left; }
+.application-table th {
+    text-align: center; /* Center align text */
+    font-size: 1.3rem; /* Same as application names */
+    font-family: 'Poppins', sans-serif; /* Matching font */
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px; /* Slight spacing */
+    background: rgba(0, 123, 255, 0.4); /* Bluish transparent */
+    border-bottom: 2px solid rgba(0, 123, 255, 0.7); /* Blue border for separation */
+    backdrop-filter: blur(6px); /* Glass effect */
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,  
+        -1px  1px 0 black,  
+         1px  1px 0 black; /* Creates black outline */
+}
+.application-table td:first-child { 
+    text-align: center;  /* Center application names */
+    font-size: 1.3rem;  /* Slightly larger font */
+    font-family: 'Poppins', sans-serif;  /* Stylish font */
+    font-weight: bold;  
+    color: white;  /* White text */
+    letter-spacing: 0.5px; /* Slight spacing */
+    background: transparent; /* Clean look */
+    padding: 10px; /* Space inside */
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,  
+        -1px  1px 0 black,  
+         1px  1px 0 black; /* Creates black outline */
+}      .page-btn { padding: 12px 20px; font-size: 1.1rem; font-weight: bold; text-align: center; color: white; background: rgba(255, 0, 0, 0.3); border: 2px solid rgba(255, 255, 255, 1); border-radius: 6px; backdrop-filter: blur(6px); box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.8); transition: all 0.3s ease-in-out; cursor: pointer; margin: 5px; }
+        .page-btn:hover { background: rgba(255, 0, 0, 0.5); box-shadow: 0px 4px 8px rgba(255, 255, 255, 1); transform: scale(1.05); }
+        .home-button { position: fixed; top: 20px; right: 20px; padding: 10px 15px; background: rgba(255, 0, 0, 0.5); color: white; font-size: 1rem; font-weight: bold; border: 2px solid rgba(255, 255, 255, 0.7); border-radius: 6px; text-decoration: none; backdrop-filter: blur(6px); box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.8); transition: all 0.3s ease-in-out; z-index: 1000; }
+        .home-button:hover { background: rgba(255, 0, 0, 0.7); transform: scale(1.1); }
+        .premium-heading {
+    text-align: center;
+    font-size: 1.6rem; /* Slightly smaller */
+    font-weight: 700;
+    margin: 4px auto 2px auto; /* Tighter top and bottom spacing */
+    color: white;
+    text-shadow: 1px 1px 6px rgba(255, 215, 0, 0.6); /* Softer shadow */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 12px; /* Less padding for compact look */
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+}
+.search-container {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows better mobile responsiveness */
+}
+
+.search-container {
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#searchInput {
+    width: 40%; /* Smaller width */
+    padding: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1.5px solid white;
+    border-radius: 6px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#searchInput:focus {
+    border-color: #ff0000;
+    box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.7);
+}
+
+.search-container button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 123, 255, 0.2); /* Light bluish transparent */
+    border: 2px solid rgba(0, 123, 255, 0.6); /* Blue border */
+    border-radius: 6px;
+    backdrop-filter: blur(6px); /* Glass effect */
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.search-container button:hover {
+    background: rgba(0, 123, 255, 0.5); /* Darker blue on hover */
+    border-color: rgba(0, 123, 255, 1);
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.8); /* Stronger glow */
+    transform: scale(1.05);
+}
+
+/* Ensures proper spacing between Home button and search bar */
+.home-button {
+    display: block;
+    margin-bottom: 10px; /* Adjusts spacing */
+}
+
+
+
+ body {
+    padding-top: 50px; /* Reduces space at the top */
+}
+
+/* Moves the Home button slightly lower but not too much */
+.home-button {
+    top: 30px; /* Slightly lower */
+}
+
+/* Reduces gap below Home button */
+.search-wrapper {
+    margin-top: 10px; /* Smaller space below the Home button */
+}
+
+/* Reduces space above the application table */
+.table-container {
+    margin-top: 20px; /* Keeps a clean layout without too much gap */
+}
+
+.application-table a {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 123, 255, 0.2); /* Light bluish transparent */
+    border: 2px solid rgba(0, 123, 255, 0.6); /* Blue border */
+    border-radius: 6px;
+    backdrop-filter: blur(6px); /* Glass effect */
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.application-table a:hover {
+    background: rgba(0, 123, 255, 0.5); /* Darker blue on hover */
+    border-color: rgba(0, 123, 255, 1);
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.8); /* Stronger glow */
+    transform: scale(1.05);
+}
+.disclaimer-box {
+    background: rgba(255, 255, 255, 0.15); /* Slightly softer white */
+    color: #ff4d4d; /* Softer red, easier on the eyes */
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 4px 0 10px 20px; /* Tighter spacing from above */
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px); /* Subtle glass effect */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1); /* Light depth */
+}
+
+</style>
+    
+    <!-- Schema.org JSON-LD Placeholder -->
+    <script id="application-schema" type="application/ld+json"></script>
+</head>
+<body>
+<picture>
+    <source srcset="applicationimage/tech2.webp" type="image/webp">
+    <img src="applicationimage/tech2.jpg" alt="Background Image" style="
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100vw; 
+        height: 100vh; 
+        object-fit: cover; 
+        z-index: -1;
+        pointer-events: none; /* Prevents interaction issues */
+        user-select: none; /* Avoids accidental selection */
+    ">
+</picture>
+
+<a href="index.html" class="home-button">Home</a>
+<h1 class="flex justify-center items-center">
+    <img src="logo/mainlogo2crop.svg" alt="1337XTorrentSearch Logo" width="220" height="150">
+</h1>
+
+<!-- Wrapper to properly align elements -->
+<div class="search-wrapper">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search application..." onkeyup="searchapplication()">
+        <button onclick="searchapplication()">Search</button>
+    </div>
+</div>    <h1 class="premium-heading">Top 1000 application Worldwide</h1>
+<p class="disclaimer-box">
+    Note - This is not any download recommendation. We are just showing the top 1000 applications list worldwide.
+ </p>
+    <div class="table-container">
+        <table class="application-table">
+            <thead>
+                <tr>
+                    <th>application Name</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody id="applicationList"></tbody>
+        </table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+
+    <script src="alljs/application.js"></script>
+    <script>
+        const applicationPerPage = 50;
+        let currentPage = 1;
+
+        function generateMetaTags() {
+            const head = document.head;
+            applicationData.application.forEach((application, index) => {
+                const metaTags = [
+                    { name: `application-download-${index + 1}`, content: `${application.name} Free Download` },
+                    { name: `application-play-${index + 1}`, content: `Play ${application.name} Online` },
+                    { name: `application-category-${index + 1}`, content: `Best ${application.name} application` }
+                ];
+                metaTags.forEach(tag => {
+                    const metaElement = document.createElement("meta");
+                    metaElement.name = tag.name;
+                    metaElement.content = tag.content;
+                    head.appendChild(metaElement);
+                });
+            });
+        }
+
+        function generateapplicationchema() {
+    const schemaScript = document.getElementById("application-schema");
+    const application = applicationData.application.map(application => ({
+        "@context": "https://schema.org",
+        "@type": "TVSeries",  // Change this to "Movie" if it's a film
+        "name": application.name,
+        "url": application.url,
+        "author": {
+            "@type": "Organization",
+            "name": "Top application List"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "1000"
+        }
+    }));
+    schemaScript.textContent = JSON.stringify(application, null, 2);
+}
+
+        function displayapplication(page) {
+            const applicationList = document.getElementById("applicationList");
+            const pagination = document.getElementById("pagination");
+            applicationList.innerHTML = "";
+            pagination.innerHTML = "";
+            const start = (page - 1) * applicationPerPage;
+            const end = start + applicationPerPage;
+            const paginatedapplication = applicationData.application.slice(start, end);
+            paginatedapplication.forEach(application => {
+                const row = document.createElement("tr");
+                const nameCell = document.createElement("td");
+                nameCell.textContent = application.name;
+                const linkCell = document.createElement("td");
+                const applicationLink = document.createElement("a");
+                applicationLink.href = application.url;
+                applicationLink.textContent = "Enter";
+                applicationLink.target = "_blank";
+                applicationLink.style.color = "white";
+                linkCell.appendChild(applicationLink);
+                row.appendChild(nameCell);
+                row.appendChild(linkCell);
+                applicationList.appendChild(row);
+            });
+            const totalPages = Math.ceil(applicationData.application.length / applicationPerPage);
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+                btn.classList.add("page-btn");
+                btn.onclick = () => {
+                    currentPage = i;
+                    displayapplication(i);
+                };
+                if (i === page) btn.style.background = "#0056b3";
+                pagination.appendChild(btn);
+            }
+        }
+
+        generateMetaTags();
+        generateapplicationchema();
+        displayapplication(currentPage);
+    </script>
+<script>
+    function searchapplication() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let applicationList = document.getElementById("applicationList");
+
+        if (!applicationList) return; // If no application list, exit function
+
+        applicationList.innerHTML = ""; // Clear current list
+
+        applicationData.application.forEach(application => {
+            if (application.name.toLowerCase().includes(input)) {
+                let row = document.createElement("tr");
+                let nameCell = document.createElement("td");
+                nameCell.textContent = application.name;
+                let linkCell = document.createElement("td");
+                let applicationLink = document.createElement("a");
+                applicationLink.href = application.url;
+                applicationLink.textContent = "See More";
+                applicationLink.target = "_blank";
+                applicationLink.style.color = "white";
+                linkCell.appendChild(applicationLink);
+                row.appendChild(nameCell);
+                row.appendChild(linkCell);
+                applicationList.appendChild(row);
+            }
+        });
+
+        if (applicationList.innerHTML === "") {
+            applicationList.innerHTML = "<tr><td colspan='2' style='text-align: center;'>No application found</td></tr>";
+        }
+    }
+</script>
+</body>
+</html>

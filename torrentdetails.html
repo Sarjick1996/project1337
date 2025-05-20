@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get complete torrent details, magnet links, and download options in a sleek, user-friendly dark theme interface. Best experience for torrent users looking for quality and speed.">
+    <meta name="keywords" content="torrent, download, dark theme, magnet link, torrent details, uTorrent, RARBG, 1337x, torrent info, peer to peer, torrent files, movie torrent, game torrent, software torrent, free torrent, best torrents, high quality torrent, torrent search engine, fast download, magnet URI">
+    <meta name="author" content="Your Name">
+    <title>Website Details</title>
+    <style>
+           body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212 url('torrentimage/utorrent.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+        @supports not (background-image: url("torrentimage/utorrent.webp")) {
+            body {
+                background-image: url("torrentimage/utorrent.jpg");
+            }
+        }
+        .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .home-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ff6f61;
+    }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(18, 18, 18, 0.85);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            body {
+                background-attachment: scroll;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+
+        .site p, .site strong {
+            font-weight: 400 !important;
+            color: #e0e0e0 !important;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #ff7e5f;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ff7e5f;
+            padding-bottom: 5px;
+        }
+
+        .site {
+            padding: 15px;
+            background: rgba(18, 18, 18, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(3px);
+        }
+
+        a {
+            color: #80cbc4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #444;
+        }
+
+        th {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        td {
+            background-color: #1c1c1c;
+        }
+
+        pre {
+            background-color: #212121;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+            color: #e0e0e0;
+        }
+
+        img {
+            max-width: 100%;
+            border: 1px solid #444;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+
+        p, .site p, .torrent-name p, .gallery-item p, .igg-games p { 
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 400 !important;
+            color: #e0e0e0 !important;
+            text-align: justify !important;
+            width: 100%;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        b, strong {
+            color: #ffffff;
+        }
+
+        td font[color="green"] {
+            color: #81c784 !important;
+        }
+
+        td font[color="red"] {
+            color: #e57373 !important;
+        }
+
+        td font[color="orange"] {
+            color: #ffb74d !important;
+        }
+
+        font[color="gray"], font[color="grey"] {
+            color: #b0bec5 !important;
+        }   
+ footer {
+  max-width: 960px;
+  margin: 4em auto 2em;
+  font-size: 0.95em;
+  text-align: center;
+  padding: 1.5em;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  margin: 0;
+}
+
+
+ </style>
+</head>
+<body>
+ <a href="index.html" class="home-button">Home</a>
+ <h1 class="flex justify-center items-center">
+    <img src="logo/mainlogo2crop.svg" alt="1337XTorrentSearch Logo" width="220" height="150">
+</h1>
+
+ <div class="container">
+    <h1>Torrentsites Details</h1>
+    
+    <div class="site">
+        <h2>1. YTS</h2>
+        <p><strong>URL:</strong> <a href="https://yts.mx" target="_blank">https://yts.mx</a></p>
+        <p><strong>Description:</strong> YTS, also known as YIFY Torrents, is a well-known torrent search engine and indexing platform that specializes in high-quality, compressed movie torrents. It has gained widespread popularity among movie enthusiasts for offering high-definition (HD) films in small file sizes, making downloads efficient while maintaining superior video and audio quality.Originally founded by the YIFY group in the early 2010s, YTS quickly became a dominant name in the movie torrenting community. The platform gained recognition for its unique ability to compress movies without significant quality loss, making them accessible to users with limited bandwidth. Despite the shutdown of the original YIFY group in 2015, the YTS brand was revived under new management, continuing to provide movie torrents with the same focus on quality and efficiency.YTS is highly regarded for its well-organized movie library and user-friendly design. Some of its key features include:✅ High-quality movie torrents in 720p, 1080p, and even 4K resolutions.✅ Highly compressed files that reduce download size while retaining quality.✅ A vast collection of classic and newly released films.✅ User-friendly interface with search and filter options.✅ Magnet links and direct torrent downloads for convenience.
+
+Unlike general torrent sites, YTS focuses exclusively on movies, making it a preferred choice for those seeking optimized film torrents with minimal storage and bandwidth requirements.Due to its popularity, YTS has faced domain restrictions in several regions. To remain accessible, it operates through alternative domains, proxy servers, and mirror sites. Many users prefer using VPN services to browse the platform securely, particularly in areas where torrent sites face legal restrictions.YTS is a torrent indexing platform and does not host or store any movie files on its servers. Users should ensure compliance with local laws and regulations when accessing such platforms. To enhance privacy and security, using a VPN service is recommended while browsing these sites.With its extensive movie collection, efficient compression techniques, and high-quality torrents, YTS remains one of the most popular movie torrent platforms. However, users should always prioritize legal considerations, cybersecurity, and responsible browsing practices when accessing torrent indexing websites.</p>
+    </div>
+    
+    <div class="site">
+        <h2>2. 1337x</h2>
+        <p><strong>URL:</strong> <a href="https://www.1337x.to" target="_blank">https://www.1337x.to</a></p>
+        <p><strong>Description:</strong> 1337x is a well-known torrent indexing website that has been around since 2007. Over the years, it has become a go-to platform for users seeking a diverse range of digital content, including movies, TV shows, software, games, music, and more. While the exact founder of 1337x remains unknown, it is maintained by a dedicated community that ensures regularly updated and well-organized content.
+
+The website gained significant popularity after other major torrent sites, such as KickassTorrents and ExtraTorrent, were taken down. One of the key reasons for 1337x’s success is its user-friendly interface and well-categorized sections, making it easy for visitors to explore and find relevant content. The platform also provides helpful details such as file size, upload date, and seeders, ensuring a seamless experience for users.
+
+Due to its popularity, 1337x has undergone multiple domain changes to remain accessible to users worldwide. Many individuals rely on mirror sites or VPN services to access the platform, especially in regions where it is restricted. Despite these challenges, 1337x continues to be a widely used platform for those interested in peer-to-peer (P2P) file sharing via the BitTorrent protocol.
+
+Users appreciate 1337x for its active community and verification system, which help in maintaining the quality and authenticity of the indexed torrents. Additionally, the platform includes a rating and comment feature, allowing visitors to review files before downloading.1337x is a torrent search engine that indexes publicly available content. It does not host or store any files on its servers. Users should ensure compliance with local laws and regulations when accessing torrent platforms. For privacy and security, many users prefer using VPN services while browsing such sites.
+
+By offering a vast library and a streamlined browsing experience, 1337x remains a top choice for those exploring the world of torrents.</p>
+    </div>
+    
+    <div class="site">
+        <h2>3. NYAA</h2>
+        <p><strong>URL:</strong> <a href="https://nyaa.si" target="_blank">https://nyaa.si</a></p>
+        <p><strong>Description:</strong> Nyaa: A Popular Torrent Indexing Platform for Anime and More
+
+Nyaa is a well-known torrent search engine and indexing platform that specializes in anime, manga, games, music, and other East Asian media content. It has gained a strong reputation among fans of Japanese entertainment for providing a vast collection of torrents in various formats, including subbed and dubbed anime episodes, high-quality manga scans, and OSTs (original soundtracks).Originally launched in the mid-2000s, Nyaa quickly became one of the most recognized names in the anime torrenting community. In 2017, the original Nyaa website was taken offline, but several alternative platforms emerged, maintaining the same core functionality and focus on anime-related content. Over the years, Nyaa has evolved into a reliable source for peer-to-peer (P2P) file sharing using the BitTorrent protocol.Nyaa is widely used for its easy-to-navigate interface and regularly updated torrent listings. Some of its key features include:✅ Extensive anime and manga library covering classic and latest releases.✅ Various file formats and resolutions, including 480p, 720p, and 1080p.✅ Multiple categories, such as anime, live-action, audio, and software.✅ Magnet links and torrent files for easy downloading.✅ Active community and verified uploads ensuring high-quality content.
+
+Unlike general torrent sites, Nyaa focuses specifically on East Asian media, making it a dedicated platform for anime enthusiasts, manga readers, and Japanese pop culture fans.Due to its popularity, Nyaa has faced occasional domain restrictions in certain regions. To maintain accessibility, the platform operates through alternative domains, mirror sites, and proxy links. Many users choose to browse the site using VPN services for enhanced security and privacy, especially in regions where torrent sites are restricted.Nyaa functions as a torrent indexing platform and does not host or store any content on its servers. Users are encouraged to comply with local laws and regulations when accessing such platforms. To ensure privacy and security, using a VPN service is recommended.With its dedicated anime focus, extensive media library, and user-friendly interface, Nyaa remains one of the most popular torrent platforms for anime fans. However, users should always prioritize legal considerations, cybersecurity, and responsible browsing practices when accessing torrent indexing websites.</p>
+    </div>
+    
+    <div class="site">
+        <h2>4. TorrentGalaxy</h2>
+        <p><strong>URL:</strong> <a href="https://torrentgalaxy.to" target="_blank">https://torrentgalaxy.to</a></p>
+        <p><strong>TorrentGalaxy, commonly known as TGx, is a popular torrent search engine and indexing platform that provides access to a wide range of digital content, including movies, TV shows, games, software, music, and eBooks. Launched in 2018, TorrentGalaxy quickly gained recognition for its user-friendly interface, active community, and high-quality torrents.One of the standout features of TorrentGalaxy is its modern and easy-to-navigate interface, allowing users to search and download torrents effortlessly. The site offers detailed file descriptions, seed/peer counts, and user comments, helping visitors find verified and high-quality torrents. Additionally, TGx provides direct streaming options, enabling users to watch select movies and TV shows without downloading the full file.
+
+TorrentGalaxy is also known for its strong community of uploaders and moderators, ensuring that torrents are regularly updated, verified, and categorized. Unlike many torrent sites, TGx integrates discussion forums and chat features, fostering an interactive environment for users to share recommendations and insights.Due to its growing popularity, TorrentGalaxy has experienced domain restrictions in certain regions. To remain accessible, the platform operates through multiple domains, proxy sites, and mirror links. Many users opt for VPN services to access TorrentGalaxy securely and privately, especially in areas where torrenting platforms face restrictions.TorrentGalaxy functions as a torrent indexing website and does not host or store any files on its servers. Users are advised to comply with local laws and regulations when accessing such platforms. For enhanced privacy and security, using a VPN service is recommended.With its clean design, active community, and extensive content library, TorrentGalaxy has become a go-to platform for torrent enthusiasts. However, users should always ensure safe browsing practices and legal compliance when using torrent search engines.</p>
+    </div>
+    
+    <div class="site">
+        <h2>5. The Pirate Bay</h2>
+        <p><strong>URL:</strong> <a href="https://thepiratebay.org" target="_blank">https://thepiratebay.org</a></p>
+        <p><strong>Description:</strong> The Pirate Bay (TPB) is one of the most well-known torrent search engines and indexing platforms, providing access to a vast range of digital content, including movies, TV shows, games, music, software, and more. It was founded in 2003 by a Swedish anti-copyright organization called Piratbyrån. Over the years, it has become a widely recognized name in the peer-to-peer (P2P) file-sharing community, using the BitTorrent protocol to connect users worldwide.The Pirate Bay is known for its simple yet effective interface, allowing users to search and download torrents quickly. It categorizes files into sections such as Movies, TV Shows, Applications, and Games, making navigation easy. One of its standout features is its magnet link system, which enables users to download torrents without relying on traditional .torrent files, improving efficiency and security.
+
+Due to its popularity and influence, The Pirate Bay has faced multiple domain seizures and legal challenges over the years. As a result, it has undergone several domain changes and mirror site creations to maintain accessibility. Many users rely on VPN services and proxy sites to access TPB in regions where it is restricted.The Pirate Bay has a strong community of uploaders who consistently share and verify torrents. Users can also find helpful ratings and comments, ensuring that they download quality files while avoiding potential security risks.The Pirate Bay is a torrent search engine that indexes publicly available content and does not host any files on its servers. Users should be aware of their local laws and regulations when using torrent platforms. To enhance privacy and security, many individuals prefer using VPN services while browsing such sites.With its extensive library and long-standing reputation in the torrenting community, The Pirate Bay remains a widely used platform for P2P file sharing. However, users should always prioritize privacy, security, and legal compliance when accessing such platforms.</p>
+    </div>
+    
+    <div class="site">
+        <h2>6. FitGirl Repacks</h2>
+        <p><strong>URL:</strong> <a href="https://fitgirl-repacks.site" target="_blank">https://fitgirl-repacks.site</a></p>
+        <p><strong>Description:</strong> FitGirl Repacks is a well-known game repacking platform that specializes in compressing PC games to significantly reduce their file sizes without compromising quality. It has gained widespread recognition among gaming enthusiasts for offering highly optimized and compressed game files, making downloads more accessible for users with limited bandwidth or storage space.FitGirl Repacks was founded by an individual or group operating under the alias FitGirl. While the exact date of its launch is unclear, the platform became widely known in the mid-2010s for its expertise in game repacking and optimization. The repacks offered by FitGirl use advanced compression techniques to shrink game sizes while maintaining the original game files, ensuring fast and efficient installations.FitGirl Repacks is popular for several reasons:✅ Highly compressed game files to save bandwidth and storage.✅ Lossless compression, ensuring that the game remains unaltered.✅ Multiple download options with mirrors for accessibility.✅ Detailed installation instructions to assist users.✅ Frequent updates to provide the latest game repacks.
+
+Unlike traditional game torrents, FitGirl Repacks focuses on efficiency, providing stable and functional game repacks that reduce installation errors. The website also features detailed FAQs and troubleshooting guides, helping users resolve issues during installation.Due to its popularity, FitGirl Repacks has experienced domain restrictions in certain regions. To remain accessible, the platform operates through alternative domains, mirror sites, and proxy links. Many users prefer using VPN services for privacy and security while browsing the platform, particularly in locations where access to repacking sites is restricted.FitGirl Repacks is a game repacking platform that focuses on optimizing game files through compression. It does not host or store any game files directly on its servers. Users should ensure they comply with local laws and regulations when accessing such platforms. For enhanced privacy and security, using a VPN service is recommended.With its advanced compression techniques, frequent updates, and user-friendly approach, FitGirl Repacks remains a widely recognized platform for those seeking optimized game downloads. However, users should always consider legal implications, online security, and responsible browsing practices when accessing repacking websites.</p>
+    </div>
+    
+    <div class="site">
+        <h2>7. Skidrow & Reloaded</h2>
+        <p><strong>URL:</strong> <a href="https://skidrowreloaded.com" target="_blank">https://skidrowreloaded.com</a></p>
+        <p><strong>Description:</strong>Skidrow & Reloaded is a widely recognized game indexing website that provides access to a variety of PC games, including action, adventure, simulation, RPGs, and strategy titles. Known for its frequent updates and extensive game library, it has become a popular choice among gaming enthusiasts looking for the latest game-related content.Skidrow & Reloaded is the result of a merger between two well-known names in the gaming community: Skidrow and Reloaded. These groups have been around since the early 2000s, originally known for game scene releases and patches. Over time, they evolved into a platform that indexes and categorizes various game-related files, making it easier for users to explore different gaming options.Skidrow & Reloaded is known for its clean and user-friendly interface, allowing visitors to easily browse and search for games. The platform offers:
+✅ Well-organized categories for different game genres.
+✅ Detailed game descriptions, system requirements, and installation guides.
+✅ Frequent updates to ensure access to the latest gaming content.
+✅ Multiple download options for convenience.
+
+The site is designed to provide a seamless experience, with helpful instructions on game installation and troubleshooting. Additionally, it features a community-driven approach, where users can leave comments and share insights about various games.Due to its popularity, Skidrow & Reloaded has faced domain restrictions in certain regions. To stay accessible, the platform operates through mirror sites, alternative domains, and proxy links. Many users prefer using VPN services to browse the site securely and privately, especially in areas where access is restricted.Skidrow & Reloaded is a game indexing platform and does not host or store any game files on its servers. Users should ensure they comply with local laws and regulations when accessing game-related content online. For security and privacy, using a VPN service is recommended while browsing such platforms.With its vast game library, frequent updates, and user-friendly interface, Skidrow & Reloaded remains a well-known platform for gaming enthusiasts. However, users should always be mindful of legal considerations, cybersecurity, and responsible browsing practices when exploring game indexing websites.</p>
+    </div>
+    
+    <div class="site">
+        <h2>8. EZTV</h2>
+        <p><strong>URL:</strong> <a href="https://eztv.re" target="_blank">https://eztv.re</a></p>
+        <p><strong>Description:</strong> EZTV is a well-known torrent search engine and indexing platform that specializes in TV shows and series. Established in 2005, EZTV quickly became a leading source for TV-related torrents, offering a wide selection of popular shows, documentaries, reality TV, and more. Over the years, it has gained a strong reputation among torrent enthusiasts for providing high-quality and regularly updated content.EZTV was originally founded by a group of TV torrenting enthusiasts who wanted to provide a dedicated platform for sharing TV series. However, in 2015, the site underwent a significant change when it was taken over by another torrent group. Despite this transition, EZTV has continued to be a go-to platform for users looking to access torrent links for TV shows.One of EZTV’s standout features is its TV-focused content, making it easier for users to find specific shows without navigating through unrelated torrents. The site offers:
+✅ Well-organized categories for different TV genres.
+✅ Detailed episode listings with release dates and file sizes.
+✅ Magnet links for direct downloads via the BitTorrent protocol.
+✅ Regular updates to keep up with the latest episodes and seasons.
+
+EZTV is designed to be lightweight and user-friendly, ensuring a smooth browsing experience. Users can find everything from the latest trending TV series to classic shows, often in various resolutions to suit different device preferences.Due to legal challenges and domain takedowns, EZTV has undergone multiple domain changes to remain accessible. Many users rely on mirror sites, proxy links, and VPN services to browse the platform securely, especially in regions where torrent sites face restrictions.EZTV is a torrent indexing website that does not host or store any files on its servers. Users should ensure compliance with local laws and regulations when accessing torrent platforms. To enhance privacy and security, many visitors opt for VPN services while browsing such sites.With its exclusive focus on TV shows, lightweight interface, and regularly updated torrent listings, EZTV remains a top choice for TV enthusiasts. However, users should always prioritize legal compliance, online safety, and secure browsing practices when using torrent indexing platforms.</p>
+    </div>
+    
+    <div class="site">
+        <h2>9. LimeTorrents</h2>
+        <p><strong>URL:</strong> <a href="https://www.limetorrents.lol" target="_blank">https://www.limetorrents.lol</a></p>
+        <p><strong>Description:</strong>LimeTorrents is a popular torrent search engine and indexing platform that provides access to a wide variety of digital content, including movies, TV shows, games, software, music, and anime. Established in 2009, it has become a well-known name in the torrenting community, offering a clean and organized interface for users seeking peer-to-peer (P2P) file sharing through the BitTorrent protocol.LimeTorrents is recognized for its simple and user-friendly design, making it easy to search and download torrents. The platform categorizes files into different sections, such as movies, TV shows, applications, and games, ensuring a smooth browsing experience.
+
+One of the notable aspects of LimeTorrents is its frequent updates and verified torrent listings, which help users find reliable and high-quality files. The site provides essential details such as seed/peer count, file size, and upload date, allowing users to choose torrents with better download speeds.Like many other torrent platforms, LimeTorrents has faced occasional restrictions in certain regions. To maintain accessibility, the site operates through proxy servers, mirror sites, and alternative domains. Many users prefer using VPN services to browse the site securely and privately, especially in areas where torrent websites are restricted.LimeTorrents is a torrent search engine that indexes publicly available content and does not host or store any files on its servers. Users should ensure they comply with local laws and regulations when accessing torrent platforms. For security and privacy, using a VPN service is recommended while browsing such websites.With its vast torrent library, intuitive design, and active updates, LimeTorrents remains a widely used platform for users looking for torrent indexing services. However, users should always prioritize legal compliance, cybersecurity, and responsible browsing practices when exploring torrent search engines.</p>
+    </div>
+    
+    <div class="site">
+        <h2>10. IGGGAMES</h2>
+        <p><strong>URL:</strong> <a href="https://igg-games.com" target="_blank">https://igg-games.com</a></p>
+        <p><strong>IGG Games is a well-known website that provides access to a variety of PC games, including action, adventure, simulation, RPGs, and strategy titles. Established in the mid-2010s, IGG Games has gained popularity for offering a vast library of game-related content, attracting a global audience of gaming enthusiasts.IGG Games is known for its user-friendly interface, which allows visitors to search and browse games effortlessly. Each game listing includes detailed descriptions, system requirements, screenshots, and installation guides, making it easier for users to find and install their desired games.
+
+One of the key features of IGG Games is its frequent updates, ensuring that new game releases, patches, and expansions are available as soon as possible. The website categorizes games based on genre, release date, and popularity, making it convenient for users to explore trending and classic titles.Due to its growing popularity, IGG Games has faced occasional domain restrictions in some regions. To remain accessible, it operates through alternative domains and mirror sites. Many users also opt for VPN services to enhance their privacy and access the website securely.IGG Games functions as a game indexing platform and does not directly host or store game files. Users should ensure they comply with local laws and regulations when accessing game-related content online. For privacy and security, it is recommended to use VPN services while browsing such platforms.With its extensive game library, frequent updates, and easy navigation, IGG Games has become a well-known platform for gaming enthusiasts. However, users should always be mindful of legal considerations, safe browsing practices, and official game sources when exploring gaming content online.</p>
+    </div>
+ </div>
+<footer>
+  <p>
+    <strong>Disclaimer:</strong> This guide is provided strictly for legal and educational use.
+    Torrenting may carry legal and security risks. Users are solely responsible for their actions.
+    Only download content that is open-source, copyright-free, or lawfully permitted
+    in your region. Accessing restricted or unauthorized material through proxies or torrent platforms
+    is done at your own risk. This site disclaims all liability for misuse or consequences thereof.
+  </p>
+</footer>
+
+</body>
+</html>
